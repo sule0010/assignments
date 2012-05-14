@@ -6,13 +6,13 @@ html {
 }
 
 body {
-	margin: 1em auto;
+	margin: 3em auto;
 	width : 50em;
 	padding: 1 em;
 }
 
 form {
 	float: left;
-	padding-top: 0.75em;
+	padding-top: 0.25em;
 	margin: 0;
 }
