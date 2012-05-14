@@ -40,7 +40,7 @@
 <html>
 	<head>
 		<meta charset="utf-8">
-		<title>Money Calculator Forms</title>
+		<title>Money Calculator Form</title>
 		<link href="css/general.css" rel="stylesheet">
 	</head>
 	
