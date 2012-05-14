@@ -1,7 +1,3 @@
-<?php 
-var_dump($_POST);
-?>
-
 <?php
 	$number1 = 0;
 	$number2 = 0;
