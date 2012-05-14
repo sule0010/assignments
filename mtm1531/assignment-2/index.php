@@ -8,14 +8,19 @@
 	<body>
 	
 	<form method="post" action="index.php">
-			<label id="number-one">Number 1</label>
-			<input type="number" name="number-one">
+			<label id="number">Number 1</label>
+			<input type="number" name="number" min="1" max="">
 			
-			<label id="number-two">Number 2</label>
-			<input type="number" name="number-two">
+			<label id="number">Number 2</label>
+			<input type="number" name="number" min="1" max="">
 			
-			<label id="number-two">function</label>
-			<input type="function" name="number-two">
+			<label id="function">function</label>
+			<select>
+				<option value="+">+</option>
+				<option value="-">-</option>
+				<option value="*">*</option>
+				<option value="/">/</option>
+			</select>
 				
 			<button type="submit">Calculate</button>
 		</form>
