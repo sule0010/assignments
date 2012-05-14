@@ -2,7 +2,7 @@
 <html>
 	<head>
 		<meta charset="utf-8">
-		<title>Money Calculator</title>
+		<title>Money Calculator Forms</title>
 	</head>
 	
 	<body>
