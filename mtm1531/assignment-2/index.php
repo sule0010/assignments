@@ -45,6 +45,7 @@ var_dump($_POST);
 	<head>
 		<meta charset="utf-8">
 		<title>Money Calculator Forms</title>
+		<link href="css/general.css" rel="stylesheet">
 	</head>
 	
 	<body>
