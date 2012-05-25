@@ -1,3 +1,22 @@
 @charset "utf-8";
 /* CSS Document */
 
+#circle {
+	margin: 1em;
+	padding: 3em;
+	display: block;
+	border-radius: 50em;
+	background-color: #F00;
+	width: 5em;
+	height: 5em;
+	text-align: center;
+	font-size: 2em;
+	line-height: 5em;
+	border: solid 10px #000000;
+}
+
+span{
+	font-size: 5em;
+}
+
+
