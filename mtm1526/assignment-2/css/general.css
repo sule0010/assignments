@@ -1,5 +1,24 @@
 @charset "UTF-8";
 /* CSS Document */
+body{
+	margin: 3em auto;
+	width: 20em;
+}
+
+h1{
+	text-align: center;
+}
+
+.wrap{
+	background-color:#666666;
+	border-bottom-left-radius: 1em;
+	border-bottom-right-radius: 1em;
+	border-style: ridge;
+	margin: 0 auto;
+	padding: 1em;
+	width: 20em;
+	
+}
 
 .current{
 	color: rgba(153,153,153,0.6);
