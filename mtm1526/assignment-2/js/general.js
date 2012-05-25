@@ -16,16 +16,20 @@ bind(addBtn, 'click', function() {
 	list = document.createElement('li');
 	document.getElementById('container').appendChild(list);
 	list.innerHTML = userInput.value;
-	//removeCurrent();
-	//list.className = 'current';
-	//alert('I was clicked!');
+	userInput.value = '';
 });
 
+bind(userInput, 'change', function() {
+	list = document.createElement('li');
+	document.getElementById('container').appendChild(list);
+	list.innerHTML = userInput.value;
+	userInput.value = '';
+});
 
 bind(document.body, 'click', function(ev) {
 	if(ev.target.tagName.toLowerCase() == 'li'){
 		//removeCurrent();
 		list = ev.target;
 		list.className = 'current';
-	};
+	}
 });
