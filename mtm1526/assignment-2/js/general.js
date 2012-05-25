@@ -17,6 +17,15 @@ bind(addBtn, 'click', function() {
 	document.getElementById('container').appendChild(list);
 	list.innerHTML = userInput.value;
 	//removeCurrent();
-	list.className = 'current';
+	//list.className = 'current';
 	//alert('I was clicked!');
+});
+
+
+bind(document.body, 'click', function(ev) {
+	if(ev.target.tagName.toLowerCase() == 'li'){
+		//removeCurrent();
+		list = ev.target;
+		list.className = 'current';
+	};
 });
