@@ -18,3 +18,7 @@
 			break;
 		};
 	});
+	
+	$('#hide-show').on('click', function (){
+		$(circle).fadeToggle(300);
+	});
