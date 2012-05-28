@@ -2,29 +2,41 @@
 <html>
 	<head>
 		<meta charset="utf-8">
-		<title>J-Qurey App</title>
+		<title>Color the cirlce</title>
 		<link href="css/general.css" rel="stylesheet">
 	</head>
 	
 	<body>
-		<form>
-			<label for="properties">Properties:</label>
-			<select id="properties" name="properties">
-				<option value="border-color">Border Color</option>
-				<option value="background-color">Background Color</option>
-				<option value="color">Color</option>
-			</select>
+		<div id="wrap">
+			<header>
+				<h1>COLOR THE CIRCLE</h1>
+				<p>Select an option from the <strong>Properties</strong> menu and <strong>Input</strong> your choice of <strong>Color</strong>.</p>
+				<p>Just for fun you can also click the <strong>Hide/Show</strong> button to turn the visibility of the circle.</p>
+			</header> 
+			<form>
+				<label for="properties"><strong>Properties:</strong></label>
+				<select id="properties" name="properties">
+					<option value="border-color">Border Color</option>
+					<option value="background-color">Background Color</option>
+					<option value="color">Color</option>
+				</select>
+				
+				<label for="colorSelect"><strong>Color:</strong></label>
+				<input id="colorSelect" name="colorSelect">
+				<button type="submit">Apply</button>
+				
+				<button type="submit" id="hide-show">Hide/Show</button>
+			</form>
 			
-			<label for="colorSelect">Color:</label>
-			<input id="colorSelect" name="colorSelect">
-			<button type="submit">Apply</button>
+			<div id="circle"><span>b</span></div>
 			
-			<button type="submit" id="hide-show">Hide/Show</button>
-		</form>
+			<footer>
+				<strong>Created by Bashir Suleiman</strong>
+			</footer>
+			
+		</div>
 		
-		<div id="circle"><span>b</span></div>
-		
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
-	<script src="js/general.js"></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+		<script src="js/general.js"></script>
 	</body>
 </html>
