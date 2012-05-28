@@ -1,8 +1,28 @@
 @charset "utf-8";
 /* CSS Document */
+html{
+	font-family:Verdana, Geneva, sans-serif;
+}
+
+body {
+	margin: 2em auto;
+}
+
+#wrap{
+	margin: 0 auto;
+	padding: 1em;
+	width: 36em;
+	background-color: rgba(153,153,153,0.2);
+	border: solid 5px #000000;
+	border-radius: 2em;
+}
+
+h1{
+	text-align:center;
+}
 
 #circle {
-	margin: 1em;
+	margin: 1em auto;
 	padding: 3em;
 	display: block;
 	border-radius: 50em;
@@ -16,7 +36,12 @@
 }
 
 span{
+	font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
 	font-size: 5em;
 }
 
+footer{
+	padding: 1em;
+	text-align:right;
+}
 
