@@ -1,4 +1,6 @@
 // JavaScript Document	
+$(document).ready(function (){
+	
 	$('form').on('submit', function (ev) {
 		ev.preventDefault();
 		
@@ -22,3 +24,4 @@
 	$('#hide-show').on('click', function (){
 		$(circle).fadeToggle(300);
 	});
+});
