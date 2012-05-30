@@ -10,7 +10,10 @@ require_once 'includes/form-process.php';
 	</head>
 	
 	<body>
-	
+	<?php if ($finished == true) :?>
+		<h2>Thanks for registering</h2>
+	<?php else : ?>
+			
 		<form method="post" action="index.php">
 			<div>
 				<label for="name">Name<?php if (isset($errors['name'])): ?><strong class="error"> is required</strong><?php endif; ?></label>
@@ -36,13 +39,13 @@ require_once 'includes/form-process.php';
 				<fieldset>
 					<legend>Preferred Language<?php if (isset($errors['lang'])): ?><strong class="error"> please pick one of the options</strong><?php endif; ?></legend>
 					
-					<input type="radio" id="eng" name="lang">
+					<input type="radio" id="eng" name="lang" value="eng"<?php if($lang == 'eng'){ echo '✓';} ?>>
 					<label for="eng">English</label>
 					
-					<input type="radio" id="frn" name="lang">
+					<input type="radio" id="frn" name="lang" value="frn"<?php if($lang == 'frn'){ echo '✓';} ?>>
 					<label for="frn">French</label>
 					
-					<input type="radio" id="esp" name="lang">
+					<input type="radio" id="esp" name="lang" value="esp"<?php if($lang == 'esp'){ echo '✓';} ?>>
 					<label for="esp">Spanish</label>
 				</fieldset>
 			</div>
@@ -59,6 +62,7 @@ require_once 'includes/form-process.php';
 			
 			<button type="submit">Send</button>
 		</form>
+	<?php endif; ?>
 	
 	</body>
 </html> 
