@@ -1,3 +1,10 @@
 @charset "UTF-8";
 /* CSS Document */
 
+label {
+	display: block;
+}
+
+.error {
+	color: #f33;
+}
