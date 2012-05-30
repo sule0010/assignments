@@ -1,3 +1,6 @@
+<?php
+require_once 'includes/form-process.php';
+?>
 <!DOCTYPE HTML>
 <html>
 	<head>
@@ -10,28 +13,28 @@
 	
 		<form method="post" action="index.php">
 			<div>
-				<label for="name">Name </label>
-				<input type="text" id="name" name="name" required value="">
+				<label for="name">Name<?php if (isset($errors['name'])): ?><strong class="error"> is required</strong><?php endif; ?></label>
+				<input type="text" id="name" name="name" required value="<?php echo $name; ?>">
 			</div>
 			
 			<div>
-				<label for="email">E-mail Address </label>
-				<input type="email" id="email" name="email" required value="">
+				<label for="email">E-mail Address<?php if (isset($errors['email'])): ?><strong class="error"> is required</strong><?php endif; ?></label>
+				<input type="email" id="email" name="email" required value="<?php echo $email; ?>">
 			</div>
 			
 			<div>
-				<label for="name">User-Name</label>
-				<input type="text" id="name" name="name" required value="" max="25">
+				<label for="u-name">User-Name<?php if (isset($errors['uName'])): ?><strong class="error"> is required</strong><?php endif; ?></label>
+				<input type="text" id="uName" name="uName" required value="<?php echo $uName; ?>" max="25">
 			</div>
 			
 			<div>
-				<label for="password">Password</label>
-				<input type="password" id="password" name="name" required value="">
+				<label for="password">Password<?php if (isset($errors['password'])): ?><strong class="error"> is required</strong><?php endif; ?></label>
+				<input type="password" id="password" name="password" required value="<?php echo $password; ?>">
 			</div>
 			
 			<div>
 				<fieldset>
-					<legend>Preferred Language</legend>
+					<legend>Preferred Language<?php if (isset($errors['lang'])): ?><strong class="error"> please pick one of the options</strong><?php endif; ?></legend>
 					
 					<input type="radio" id="eng" name="lang">
 					<label for="eng">English</label>
@@ -41,16 +44,17 @@
 					
 					<input type="radio" id="esp" name="lang">
 					<label for="esp">Spanish</label>
+				</fieldset>
 			</div>
 			
 			<div>
-				<label for="message">Notes</label>
+				<label for="message">Notes<?php if (isset($errors['message'])): ?><strong class="error"> must be between 5 and 100 chracters</strong><?php endif; ?></label>
 				<textarea id="message" name="message"></textarea>
 			</div>
 			
 			<div>
-				<label for="terms">Accept terms?</label>
-				<input type="checkbox" id="terms" name="terms" required value="">
+				<label for="terms">Accept terms?<?php if (isset($errors['terms'])): ?><strong class="error"> Terms must be accepted</strong><?php endif; ?></label>
+				<input type="checkbox" id="terms" name="terms" required value="1">
 			</div>
 			
 			<button type="submit">Send</button>
