@@ -2,6 +2,8 @@
 
 $errors = array();
 
+$finished = false;
+
 $name = filter_input(INPUT_POST, 'name', FILTER_SANITIZE_STRING);
 $uName = filter_input(INPUT_POST, 'uName', FILTER_SANITIZE_STRING);
 $email = filter_input(INPUT_POST, 'email', FILTER_SANITIZE_STRING);
@@ -31,6 +33,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 		$errors['lang'] = true;
 	}
 	if(empty($errors)) {
+		$finished = true;
 		$headers = 'From: ' . $name . ' <' . $email . ' >';
 		mail('kurodeshiro@gmail.com', $uName, $message, $headers);  
 	}
