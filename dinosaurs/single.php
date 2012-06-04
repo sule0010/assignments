@@ -31,5 +31,7 @@ $results = $sql->fetch();
 			<dd><?php echo $results['in_jurassic_park']; ?></dd>
 		</dl>
 	
+		<a href="delete.php?id=<?php echo $id; ?>">Delete</a>
+		
 	</body>
 </html>
