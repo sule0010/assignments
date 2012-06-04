@@ -1,11 +1,11 @@
 <?php
 
 // Opens a connection to the MsSQL database
-// Shared between all the PH{ files in our application
+// Shared between all the PHP files in our application
 
 $user = getenv('DB_USER'); // The MySQL username
 $pass = getenv('DB_PASS'); // The MYSQL password
-$data_source = 'mysql:host=localhost;dbname=sule0010';
+$data_source = getenv('DATA_SOURCE');
 
 ////PDO: PHP Data Objects
 // Allows us to connect to many different kinds of databases
