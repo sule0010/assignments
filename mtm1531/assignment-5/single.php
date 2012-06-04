@@ -20,22 +20,23 @@ $results = $sql->fetch();
 	<head>
 		<meta charset="utf-8">
 		<title><?php echo $results['title']; ?> &middot; Movies</title>
+		<link href="css/general.css" rel="stylesheet">
 	</head>
 	<body>
-	
-		<h1><?php echo $results['title']; ?></h1>
-		<dl>
-			<dt>Release Date</dt>
-			<dd><?php echo $results['release_date']; ?></dd>
-			<dt>Director</dt>
-			<dd><?php echo $results['director']; ?></dd>
-			<dt>Genre</dt>
-			<dd><?php echo $results['genre']; ?></dd>
-			<dt>Rating</dt>
-			<dd><?php echo $results['rating']; ?></dd>
-		</dl>
-	
-		<a href="delete.php?id=<?php echo $id; ?>">Delete</a>
+		<div class="wrapper">
+			<h1><?php echo $results['title']; ?></h1>
+			<dl>
+				<dt>Release Date</dt>
+				<dd><?php echo $results['release_date']; ?></dd>
+				<dt>Director</dt>
+				<dd><?php echo $results['director']; ?></dd>
+				<dt>Genre</dt>
+				<dd><?php echo $results['genre']; ?></dd>
+				<dt>Rating</dt>
+				<dd><?php echo $results['rating']; ?></dd>
+			</dl>
 		
+			<a href="delete.php?id=<?php echo $id; ?>">Delete</a>
+		</div>
 	</body>
 </html>
