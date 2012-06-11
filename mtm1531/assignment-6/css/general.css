@@ -1,0 +1,41 @@
+@charset "utf-8";
+/* CSS Document */
+html{
+	font-family: Verdana, Geneva, sans-serif;
+}
+
+body{
+	margin: 5em auto;
+	width: 50em;
+}
+
+.wrapper{
+	background-color: #FC0;
+	padding: 1em;
+	width: 35em;
+	border-radius: 2em;
+	border: dashed #609;
+}
+
+a{
+	text-decoration: none;
+	color: #639;
+	-moz-transition: color 0.5s; 
+}
+
+a:hover{
+	color: #F3F;
+}
+h1,h2{
+	margin-left: 1em;
+}
+
+dl{
+	margin-left: 2em;
+}
+
+dt{
+	float: left;
+	font-weight: bold;
+	padding-right: 5px;
+}
