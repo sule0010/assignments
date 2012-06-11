@@ -19,10 +19,10 @@ $results = $sql->fetchAll();
 		<title>Dinosaurs</title>
 	</head>
 	<body>
-		<a href="single.php?id=<?php echo $dino['id']; ?>">
-        	<?php echo $dino['dino_name']; ?>
-        </a>
-	<?php foreach ($results as $dino) : ?>
+		<a href="add.php"> Add Dinosaur</a>
+		
+		<?php foreach ($results as $dino) : ?>
+	
 		<h2><a href="single.php?id=<?php echo $dino['id']; ?>"><?php echo $dino['dino_name']; ?></a></h2>
 		<dl>
 			<dt>Loves Meat</dt>
