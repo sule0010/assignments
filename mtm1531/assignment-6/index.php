@@ -21,6 +21,7 @@ $results = $sql->fetchAll();
 	</head>
 	<body>
 	<div class="wrapper">
+		<a href="add.php"> Add A Movie</a>
 		<h1>Movies</h1>
 		<?php foreach ($results as $movies) : ?>
 			<h2><a href="single.php?id=<?php echo $movies['id']; ?>"><?php echo $movies['title']; ?></a></h2>
