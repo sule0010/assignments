@@ -50,6 +50,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 	<head>
 		<meta charset="utf-8">
 		<title>Add New Movie</title>
+		<link href="css/general.css" rel="stylesheet">
 	</head>
 
 	<body>

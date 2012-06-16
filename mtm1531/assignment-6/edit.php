@@ -73,6 +73,7 @@ else {
 	<head>
 		<meta charset="utf-8">
 		<title>Edit Movie</title>
+		<link href="css/general.css" rel="stylesheet">
 	</head>
 
 	<body>
