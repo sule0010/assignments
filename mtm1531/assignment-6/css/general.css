@@ -20,7 +20,10 @@ body{
 a{
 	text-decoration: none;
 	color: #639;
-	-moz-transition: color 0.5s; 
+	-moz-transition: color 0.5s;
+	-ms-transition: color 0.5s;
+	-o-transition: color 0.5s;
+	-webkit-transition: color 0.5s; 
 }
 
 a:hover{
