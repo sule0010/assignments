@@ -4,7 +4,7 @@ $errors = array();
 
 $id = filter_input(INPUT_POST, 'id', FILTER_SANITIZE_NUMBER_INT);
 $title = filter_input(INPUT_POST, 'title', FILTER_SANITIZE_STRING);
-$release_date = filter_input(INPUT_POST, 'release_date', FILTER_SANITIZE_NUMBER_INT);
+$release_date = filter_input(INPUT_POST, 'release_date', FILTER_SANITIZE_STRING);
 $director = filter_input(INPUT_POST, 'director', FILTER_SANITIZE_STRING);
 $genre = filter_input(INPUT_POST, 'genre', FILTER_SANITIZE_STRING);
 $rating = filter_input(INPUT_POST, 'rating', FILTER_SANITIZE_NUMBER_FLOAT);
@@ -38,7 +38,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 		');
 		$sql->bindValue(':id', $id, PDO::PARAM_INT);
 		$sql->bindValue(':title', $title, PDO::PARAM_STR);
-		$sql->bindValue(':release_date', $release_date, PDO::PARAM_INT);
+		$sql->bindValue(':release_date', $release_date, PDO::PARAM_STR);
 		$sql->bindValue(':director', $director, PDO::PARAM_INT);
 		$sql->bindValue(':genre', $genre, PDO::PARAM_INT);
 		$sql->bindValue(':rating', $rating, PDO::PARAM_FLOAT);
