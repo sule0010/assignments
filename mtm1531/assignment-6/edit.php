@@ -7,7 +7,7 @@ $title = filter_input(INPUT_POST, 'title', FILTER_SANITIZE_STRING);
 $release_date = filter_input(INPUT_POST, 'release_date', FILTER_SANITIZE_NUMBER_INT);
 $director = filter_input(INPUT_POST, 'director', FILTER_SANITIZE_STRING);
 $genre = filter_input(INPUT_POST, 'genre', FILTER_SANITIZE_STRING);
-$rating = filter_input(INPUT_POST, 'rating', FILTER_SANITIZE_NUMBER_INT);
+$rating = filter_input(INPUT_POST, 'rating', FILTER_SANITIZE_NUMBER_FLOAT);
 
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 	if(strlen($dino_name) < 1 || strlen($dino_name) > 256) {
@@ -22,7 +22,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 		$errors['genre'] = true;
 	}
 	
-	if(($rating) < 1 || strlen($title) > 10) {
+	if(($rating) < 1.0 || strlen($title) > 10.0) {
 		$errors['rating'] = true;
 	
 	if (empty($errors)) {
@@ -41,7 +41,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 		$sql->bindValue(':release_date', $release_date, PDO::PARAM_INT);
 		$sql->bindValue(':director', $director, PDO::PARAM_INT);
 		$sql->bindValue(':genre', $genre, PDO::PARAM_INT);
-		$sql->bindValue(':rating', $rating, PDO::PARAM_INT);
+		$sql->bindValue(':rating', $rating, PDO::PARAM_FLOAT);
 		$sql->execute();
 		
 		header('Location: index.php');
@@ -81,23 +81,23 @@ else {
 			<h1>Edit Movie</h1>
 			
 			<form method="post" action="edit.php?id=<?php echo $id; ?>">
-				<div>
+				<div class="section">
 					<label for="title">Title<?php if (isset($errors['title'])) : ?><strong class="errors">is required</strong><?php endif; ?></label>
 					<input id="title" name="title" required value="<?php echo $title; ?>">
 				</div>
-				<div>
+				<div class="section">
 					<label for="release_date">Release Date<?php if (isset($errors['release_date'])) : ?><strong class="errors">is required</strong><?php endif; ?></label>
 					<input id="release_date" name="release_date" required value="<?php echo $release_date; ?>">
 				</div>
-				<div>
+				<div class="section">
 					<label for="director">Director<?php if (isset($errors['director'])) : ?><strong class="errors">is required</strong><?php endif; ?></label>
 					<input id="director" name="director" required value="<?php echo $director; ?>">
 				</div>
-				<div>
+				<div class="section">
 					<label for="genre">Genre<?php if (isset($errors['genre'])) : ?><strong class="errors">is required</strong><?php endif; ?></label>
 					<input id="genre" name="genre" required value="<?php echo $genre; ?>">
 				</div>
-				<div>
+				<div class="section">
 					<label for="rating">Rating<?php if (isset($errors['rating'])) : ?><strong class="errors">is required</strong><?php endif; ?></label>
 					<input id="rating" name="rating" required value="<?php echo $rating; ?>">
 				</div>

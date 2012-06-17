@@ -58,23 +58,23 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 			<h1>Add New Movie</h1>
 		
 			<form method="post" action="add.php">
-				<div>
+				<div class="section">
 					<label for="title">Title<?php if (isset($errors['title'])) : ?><strong class="errors">is required</strong><?php endif; ?></label>
 					<input id="title" name="title" required value="<?php echo $title; ?>">
 				</div>
-				<div>
+				<div class="section">
 					<label for="release_date">Release Date<?php if (isset($errors['release_date'])) : ?><strong class="errors">is required</strong><?php endif; ?></label>
 					<input id="release_date" name="release_date" required value="<?php echo $release_date; ?>">
 				</div>
-				<div>
+				<div class="section">
 					<label for="director">Director<?php if (isset($errors['director'])) : ?><strong class="errors">is required</strong><?php endif; ?></label>
 					<input id="director" name="director" required value="<?php echo $director; ?>">
 				</div>
-				<div>
+				<div class="section">
 					<label for="genre">Genre<?php if (isset($errors['genre'])) : ?><strong class="errors">is required</strong><?php endif; ?></label>
 					<input id="genre" name="genre" required value="<?php echo $genre; ?>">
 				</div>
-				<div>
+				<div class="section">
 					<label for="rating">Rating<?php if (isset($errors['rating'])) : ?><strong class="errors">is required</strong><?php endif; ?></label>
 					<input id="rating" name="rating" required value="<?php echo $rating; ?>">
 				</div>

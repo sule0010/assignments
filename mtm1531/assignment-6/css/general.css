@@ -17,6 +17,19 @@ body{
 	border: dashed #609;
 }
 
+dd{
+	padding-top: 1em;
+}
+
+.section{
+	margin:0;
+	padding-top: 1em;
+}
+
+button{
+	size: 1em;
+}
+
 a{
 	text-decoration: none;
 	color: #639;
