@@ -10,8 +10,11 @@ $genre = filter_input(INPUT_POST, 'genre', FILTER_SANITIZE_STRING);
 $rating = filter_input(INPUT_POST, 'rating', FILTER_SANITIZE_NUMBER_FLOAT);
 
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
-	if(strlen($dino_name) < 1 || strlen($dino_name) > 256) {
-		$errors['dino_name'] = true;
+	if(strlen($title) < 1 || strlen($title) > 256) {
+		$errors['title'] = true;
+	}
+	if(strlen($release_date)< 1) {
+		$errors['release_date']=true;
 	}
 	
 	if(strlen($director) < 1 || strlen($director) > 30) {
@@ -24,7 +27,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 	
 	if(($rating) < 1.0 || strlen($title) > 10.0) {
 		$errors['rating'] = true;
-	
+	}
 	if (empty($errors)) {
 		//Do DB stuff
 		$sql = $db->prepare('
