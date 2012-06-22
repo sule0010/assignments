@@ -37,12 +37,16 @@ nav a:hover {
 	color: #09F;
 }
 
-nav .current,
-nav .current:link,
-nav .current:visited {
+nav .current a,
+nav .current:link a,
+nav .current:visited a{
 	background-color: #fff;
 }
 
+#fillme{
+	background-color: #fff;
+	padding: 3em;
+}
 
 body{
 	width: 50em;
