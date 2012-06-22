@@ -19,16 +19,16 @@ nav li{
 	display: inline;
 }
 
-#earth,
-#mars,
-#jupiter,
-#venus {
+nav a,
+nav a:link
+nav a:visited {
 	display: inline-block;
 	border-radius: 4px 4px 0 0;
 	background-color: #e2e2e2;
 	text-decoration: none;
 	padding: 0.5em;
 	-moz-transition: color 0.125s ease-in;
+	-webkit-transition: color 0.125s ease-in;
 	color: #000;
 	
 }
@@ -37,9 +37,9 @@ nav a:hover {
 	color: #09F;
 }
 
-nav .current a,
-nav .current a:link,
-nav .current a:visited {
+nav .current,
+nav .current:link,
+nav .current:visited {
 	background-color: #fff;
 }
 
