@@ -1,7 +1,9 @@
 $(document).ready(function() {
 	var userAvailable = $('.user-available');
-	var emailAvalable = $('.email-available');
+	var emailAvailable = $('.email-available');
 	var passwordReqs = 0;
+	var cityAvailabe = $('.city-available');
+	
 	$('#username').on('change', function (ev){
 		var username = $(this).val();
 		
@@ -96,6 +98,30 @@ $(document).ready(function() {
 			$('.pass-symbol').attr('data-state', 'achieved');
 		}
 	});
+	
+	$('#city').on('keyup', function (ev) {
+		var city = $(this).val();
+		
+		if (city.match(/[^a-zA-Z]/)) {
+			$('.city-available').attr('data-state', 'achieved');
+		}
+	});
+	
+	$('.country').on('click', function() {
+		var country = $(this);
+
+		if(country.val() == "canada") {
+		$('#address').load('countries.html #canadaAdd');
+		$('#usAdd').toggleClass('hidden');
+		}
+		if(country.val() == "us") {
+		$('#address').load('countries.html #usAdd');
+		$('#canadaAdd').toggleClass('hidden');
+		}
+
+	});
+
+
 	
 	$('form').on('submit', function(ev) {
 		if (

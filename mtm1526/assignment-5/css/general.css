@@ -43,6 +43,26 @@
 	content:"✖";
 }
 
+.city-available:before {
+	content:"✔";
+}
+
+.city-available[data-status="unchecked"] {
+	display: none;
+}
+
+.city-available[data-status="available"] {
+	color: #090;
+}
+
+.city-available[data-status="unavailable"] {
+	color: #f33;
+}
+
+.city-available[data-status="unavailable"]:before {
+	content:"✖";
+}
+
 .pass-reqs {
 	list-style-type: none;
 }
