@@ -111,11 +111,11 @@ $(document).ready(function() {
 		var country = $(this);
 
 		if(country.val() == "canada") {
-		$('#address').load('countries.html #canadaAdd');
+		$('#address').load('countries.php #canadaAdd');
 		$('#usAdd').toggleClass('hidden');
 		}
 		if(country.val() == "us") {
-		$('#address').load('countries.html #usAdd');
+		$('#address').load('countries.php #usAdd');
 		$('#canadaAdd').toggleClass('hidden');
 		}
 
